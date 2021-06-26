@@ -1,11 +1,26 @@
+/**
+ * Player Template
+ * @param {string} name - Player's name
+ * @param {Object} extend - Additional properties
+ * @returns Player object
+ */
 function Player({
-  name
+  name,
+  extend = {},
 }){
   this.id = `Player${ID()}`
   this.name = name
   this.created_at = Date.now()
-
   this.characters = []
+
+  // Feature-specific properties
+  const extendKeys = Object.keys(extend)
+  if(extendKeys.length > 0){
+    for (let index = 0; index < extendKeys.length; index++) {
+      const element = extendKeys[index];
+      this[element] = extend[element]
+    }
+  }
 
   return this
 
