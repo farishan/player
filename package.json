@@ -4,7 +4,8 @@
   "description": "JS game player object template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx uglifyjs index.js -o dist/player.js && npx uglifyjs index.js -c -o dist/player.min.js"
   },
   "repository": {
     "type": "git",
