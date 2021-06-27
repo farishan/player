@@ -1,6 +1,6 @@
 {
   "name": "@farishan/player",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JS game player object template",
   "main": "index.js",
   "scripts": {
